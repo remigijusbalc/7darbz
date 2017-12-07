@@ -2,6 +2,9 @@ import org.junit.Assert;
 import org.junit.Assert.*;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class newTestTest {
@@ -32,7 +35,6 @@ public class newTestTest {
         newTest test4 = new newTest();
         String result = test4.getUpperCase("grybas");
         assertEquals("GRYBAS", result);
-        ;
     }
 
     @Test
@@ -50,4 +52,35 @@ public class newTestTest {
         int raides = test6.suskaiciuotiSimbolius("baravykas");
         Assert.assertEquals(9, raides);
     }
+
+    @Test
+    public void turetuGautiKvadrata()
+    {
+        newTest test7 = new newTest();
+        int rez = test7.skaiciuojaSquare(5);
+        assertEquals(25, rez);
+    }
+
+    @Test
+    public void turetuRastiLetterA()
+    {
+        newTest test8 = new newTest();
+        int zodis = test8.skaiciuojaRaideA("Kate");
+        assertEquals(1,zodis);
+    }
+
+    @Test
+    public void objektuLyginimas(){
+        newTest test9 = new newTest();
+        assertEquals(null,test9.lyginaObject1(null), test9.lyginaObject2(null));
+    }
+
+    @Test
+    public void tikrinaArNeraNulis()
+    {
+     newTest test10 = new newTest();
+     String returnedString = test10.metodasTikrinaArNeraNull("Ne");
+     assertNotNull(returnedString);
+    }
+
 }
